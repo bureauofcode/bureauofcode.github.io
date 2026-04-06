@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>masO(n)</title>
+<style>
+:root {
+  --thickness: calc(.25rem);
+  --highlight: black;
+  --margin: calc(var(--thickness) * 2);
+  --page-margin: calc(var(--margin) * 10);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: var(--page-margin);
+  /*overflow: hidden;*/
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/**/
+.panel {
+  /*border: 10px solid red;*/
+  display: block;
+  /*margin:  calc(var(--margin) * -.5);*/
+}
+.tile {
+  margin: calc(var(--thickness) * -.5);
+  background-color: white;
+  color: black;
+  /*padding: 1rem;*/
+  /*border-radius: 10px;*/
+  transition: all .2s;
+  border: var(--thickness) solid white;
+  overflow: hidden;
+  box-shadow: 0 0 0rem transparent;
+}
+.tile > h2, .tile > p {
+  margin: .5rem 1rem .75rem;
+}
+.tile > p {
+  margin-bottom: 2rem;
+}
+.tile:hover {
+  z-index: 1;
+  /*color: white;*/
+  /*background-color: black;*/
+  transform: scale(1.05);
+  box-shadow: 0 0 0 calc(var(--thickness) * 1) white;
+  border-color: var(--highlight);
+  /*border-width: 1rem;*/
+}
+
+.tile > img {
+  width: 100%;
+  height: auto;
+  /*margin: -1rem -1rem 0;*/
+}
+</style>
+</head>
+<body>
+  <h1>masO(n).js</h1>
+  <div class="panel">
+    <div class="tile">
+      <img src="https://source.unsplash.com/random/300x200?sig=1">
+      <h2>Some title 1</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui vivamus arcu felis bibendum ut. Urna duis convallis convallis tellus id interdum. Lorem ipsum dolor sit amet consectetur.
+      </p>
+    </div>
+    <div class="tile">
+      <img src="https://source.unsplash.com/random/123x22?sig=2">
+      <h2>Title 2</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+    </div>
+    <div class="tile">
+      <img src="https://source.unsplash.com/random/245x150?sig=3">
+      <h2>Article title 3</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui vivamus arcu felis bibendum ut.
+      </p>
+    </div>
+    <div class="tile">
+      <img src="https://source.unsplash.com/random/250x200?sig=4">
+      <h2>Some longer title 4</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui vivamus arcu felis bibendum ut. Urna duis convallis convallis tellus id interdum. Lorem ipsum dolor sit amet consectetur. Tortor at risus viverra adipiscing. Diam sollicitudin tempor id eu nisl nunc. Pellentesque adipiscing commodo elit at. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Pellentesque adipiscing commodo elit at.
+      </p>
+    </div>
+    <div class="tile">
+      <img src="https://source.unsplash.com/random/250x100?sig=5">
+      <h2>Title 5</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui vivamus arcu felis bibendum ut. Urna duis convallis convallis tellus id interdum. Lorem ipsum dolor sit amet consectetur. Tortor at risus viverra adipiscing. Diam sollicitudin tempor id eu nisl nunc. Pellentesque adipiscing commodo elit at. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci.
+      </p>
+    </div>
+    <div class="tile">
+      <img src="https://source.unsplash.com/random/300x300?sig=6">
+      <h2>The 6</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui vivamus arcu felis bibendum ut. Urna duis convallis convallis tellus id interdum. Lorem ipsum dolor sit amet consectetur.
+      </p>
+    </div>
+    <div class="tile">
+      <img src="https://source.unsplash.com/random/250x200?sig=7">
+      <h2>Something even longer than the last long one 7</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui vivamus arcu felis bibendum ut. Urna duis convallis convallis tellus id interdum. Lorem ipsum dolor sit amet consectetur. Tortor at risus viverra adipiscing. Diam sollicitudin tempor id eu nisl nunc.
+      </p>
+    </div>
+    <div class="tile">
+      <img src="https://source.unsplash.com/random/560x100?sig=8">
+      <h2>Here comes the 8</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui vivamus arcu felis bibendum ut. Urna duis convallis convallis tellus id interdum. Lorem ipsum dolor sit amet consectetur. Tortor at risus viverra adipiscing. Diam sollicitudin tempor id eu nisl nunc. Pellentesque adipiscing commodo elit at. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Pellentesque adipiscing commodo elit at.
+      </p>
+    </div>
+    <div class="tile">
+      <img src="https://source.unsplash.com/random/400x350?sig=9">
+      <h2>Nine, nine, 9</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui vivamus arcu felis bibendum ut. Urna duis convallis convallis tellus id interdum. Lorem ipsum dolor sit amet consectetur. Tortor at risus viverra adipiscing. Diam sollicitudin tempor id eu nisl nunc. Pellentesque adipiscing commodo elit at. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Pellentesque adipiscing commodo elit at. Tincidunt tortor aliquam nulla facilisi cras fermentum odio. Egestas integer eget aliquet nibh praesent. Bibendum arcu vitae elementum curabitur vitae. Ac feugiat sed lectus vestibulum mattis.
+      </p>
+    </div>
+    <div class="tile">
+      <img src="https://source.unsplash.com/random/400x200?sig=10">
+      <h2>The perfect 10</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui vivamus arcu felis bibendum ut. Urna duis convallis convallis tellus id interdum. Lorem ipsum dolor sit amet consectetur. Tortor at risus viverra adipiscing. Diam sollicitudin tempor id eu nisl nunc. Pellentesque adipiscing commodo elit at. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Pellentesque adipiscing commodo elit at. Tincidunt tortor aliquam nulla facilisi cras fermentum odio. Egestas integer eget aliquet nibh praesent. Bibendum arcu vitae elementum curabitur vitae. Ac feugiat sed lectus vestibulum mattis. Nec tincidunt praesent semper feugiat. Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra.
+      </p>
+    </div>
+    <div class="tile">
+      <img src="https://source.unsplash.com/random/400x230?sig=11">
+      <h2>Crank it to 11</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui vivamus arcu felis bibendum ut. Urna duis convallis convallis tellus id interdum. Lorem ipsum dolor sit amet consectetur.
+      </p>
+    </div>
+    <div class="tile">
+      <img src="https://source.unsplash.com/random/450x120?sig=12">
+      <h2>The pond 12</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+    </div>
+    <div class="tile">
+      <img src="https://source.unsplash.com/random/400x400?sig=13">
+      <h2>Lucky number 13</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+    </div>
+    <div class="tile">
+      <img src="https://source.unsplash.com/random/300x200?sig=14">
+      <h2>Some title 1</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui vivamus arcu felis bibendum ut. Urna duis convallis convallis tellus id interdum. Lorem ipsum dolor sit amet consectetur.
+      </p>
+    </div>
+    <div class="tile">
+      <img src="https://source.unsplash.com/random/123x122?sig=15">
+      <h2>Title 2</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+    </div>
+    <div class="tile">
+      <img src="https://source.unsplash.com/random/245x150?sig=16">
+      <h2>Article title 3</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui vivamus arcu felis bibendum ut.
+      </p>
+    </div>
+    <div class="tile">
+      <img src="https://source.unsplash.com/random/250x100?sig=17">
+      <h2>Some longer title 4</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui vivamus arcu felis bibendum ut. Urna duis convallis convallis tellus id interdum. Lorem ipsum dolor sit amet consectetur. Tortor at risus viverra adipiscing. Diam sollicitudin tempor id eu nisl nunc. Pellentesque adipiscing commodo elit at. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Pellentesque adipiscing commodo elit at.
+      </p>
+    </div>
+    <div class="tile">
+      <img src="https://source.unsplash.com/random/250x200?sig=18">
+      <h2>Title 5</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui vivamus arcu felis bibendum ut. Urna duis convallis convallis tellus id interdum. Lorem ipsum dolor sit amet consectetur. Tortor at risus viverra adipiscing. Diam sollicitudin tempor id eu nisl nunc. Pellentesque adipiscing commodo elit at. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci.
+      </p>
+    </div>
+    <div class="tile">
+      <img src="https://source.unsplash.com/random/300x300?sig=19">
+      <h2>The 6</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui vivamus arcu felis bibendum ut. Urna duis convallis convallis tellus id interdum. Lorem ipsum dolor sit amet consectetur.
+      </p>
+    </div>
+    <div class="tile">
+      <img src="https://source.unsplash.com/random/250x130?sig=20">
+      <h2>Something even longer than the last long one 7</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui vivamus arcu felis bibendum ut. Urna duis convallis convallis tellus id interdum. Lorem ipsum dolor sit amet consectetur. Tortor at risus viverra adipiscing. Diam sollicitudin tempor id eu nisl nunc.
+      </p>
+    </div>
+    <div class="tile">
+      <img src="https://source.unsplash.com/random/560x140?sig=21">
+      <h2>Here comes the 8</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui vivamus arcu felis bibendum ut. Urna duis convallis convallis tellus id interdum. Lorem ipsum dolor sit amet consectetur. Tortor at risus viverra adipiscing. Diam sollicitudin tempor id eu nisl nunc. Pellentesque adipiscing commodo elit at. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Pellentesque adipiscing commodo elit at.
+      </p>
+    </div>
+    <div class="tile">
+      <img src="https://source.unsplash.com/random/400x100?sig=22">
+      <h2>Nine, nine, 9</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui vivamus arcu felis bibendum ut. Urna duis convallis convallis tellus id interdum. Lorem ipsum dolor sit amet consectetur. Tortor at risus viverra adipiscing. Diam sollicitudin tempor id eu nisl nunc. Pellentesque adipiscing commodo elit at. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Pellentesque adipiscing commodo elit at. Tincidunt tortor aliquam nulla facilisi cras fermentum odio. Egestas integer eget aliquet nibh praesent. Bibendum arcu vitae elementum curabitur vitae. Ac feugiat sed lectus vestibulum mattis.
+      </p>
+    </div>
+    <div class="tile">
+      <img src="https://source.unsplash.com/random/400x340?sig=23">
+      <h2>The perfect 10</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui vivamus arcu felis bibendum ut. Urna duis convallis convallis tellus id interdum. Lorem ipsum dolor sit amet consectetur. Tortor at risus viverra adipiscing. Diam sollicitudin tempor id eu nisl nunc. Pellentesque adipiscing commodo elit at. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Pellentesque adipiscing commodo elit at. Tincidunt tortor aliquam nulla facilisi cras fermentum odio. Egestas integer eget aliquet nibh praesent. Bibendum arcu vitae elementum curabitur vitae. Ac feugiat sed lectus vestibulum mattis. Nec tincidunt praesent semper feugiat. Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra.
+      </p>
+    </div>
+    <div class="tile">
+      <img src="https://source.unsplash.com/random/400x300?sig=24">
+      <h2>Crank it to 11</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui vivamus arcu felis bibendum ut. Urna duis convallis convallis tellus id interdum. Lorem ipsum dolor sit amet consectetur.
+      </p>
+    </div>
+    <div class="tile">
+      <img src="https://source.unsplash.com/random/450x120?sig=25">
+      <h2>The pond 12</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+    </div>
+    <div class="tile">
+      <img src="https://source.unsplash.com/random/400x400?sig=26">
+      <h2>Lucky number 13</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+    </div>
+  </div>
+<script>
+'use strict';
+
+const tiles = [];
+function masO(n, numberOfColumns = 3) {
+  const columns = [];
+
+  if (!n.masonRan) {
+    // store the tiles
+
+    tiles.push(...Array.from(n.children).map(
+      tile => {
+        tile.rect = tile.getBoundingClientRect();
+        return tile;
+      }
+    ));
+    // start necessary stiling
+    n.style.display = 'flex';
+    n.style.flex = `0 1 calc(100% / ${numberOfColumns}`;
+    n.style.flexDirection = 'row';
+    // flag so we don't rerun
+    n.masonRan = true;
+  }
+
+  // remove container content
+  while(n.firstChild) n.removeChild(n.lastChild);
+
+  // rebuild columns
+  let i = 0;
+  while(i++ < numberOfColumns) {
+    const column = n.appendChild(document.createElement('div'));
+    column.style.display = 'flex';
+    column.style.flexDirection = 'column';
+    column.style.maxWidth = `calc(100% / ${numberOfColumns}`;
+    column.size = 0;
+    columns.push(column);
+    n.appendChild(column);
+  }
+
+  // mason the tiles
+  tiles.forEach((tile, index) => {
+    const slot = Array.from(n.children).reduce(
+      (acc, column) => acc === null || column.size < acc.size ? column : acc,
+      null
+    );
+    slot.appendChild(tile);
+    const rect = tile.getBoundingClientRect();
+    if (tile.rect.height < rect.height) {
+      tile.rect = rect;
+    }
+    slot.size += rect.height;
+  });
+}
+
+// launcher
+
+const preloader = document.body.appendChild(document.createElement('div'));
+preloader.style.position = 'fixed';
+preloader.style.backgroundColor = '#fff';
+preloader.style.width = '100vw';
+preloader.style.height = '100vh';
+preloader.style.display = 'flex';
+preloader.style.justifyContent = 'center';
+preloader.style.alignItems = 'center';
+preloader.innerHTML = 'Loading...';
+preloader.style.left = '0';
+preloader.style.top = '0';
+// preloader.style.opacity = '.5';
+preloader.style.display = 'flex';
+// preloader.style.display = 'flex';
+document.body.style.overflow = 'hidden';
+
+
+window.addEventListener('load', () => {
+  document.body.style.overflow = 'auto';
+  let time;
+  tiles.forEach((tile, index) => {
+    tile.style.opacity = '0';
+
+    const fade = (t) => {
+      if (time === undefined) time = t;
+      const elapsed = (t - time) / 50;
+      if (elapsed < index) {
+        window.requestAnimationFrame(fade);
+      } else {
+        tile.style.opacity = 1.0;
+      }
+    }
+    window.requestAnimationFrame(fade);
+  });
+  document.body.removeChild(preloader);
+  //
+});
+// preloader.style.
+
+const masonry = () => masO(document.querySelector('.panel'), Math.floor(window.innerWidth / 350) || 1);
+window.addEventListener('resize', masonry);
+window.addEventListener('DOMContentLoaded', masonry);
+window.addEventListener('load', masonry);
+
+</script>
+</body>
+</html>
